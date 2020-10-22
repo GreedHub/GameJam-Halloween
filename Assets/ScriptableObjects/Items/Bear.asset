@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dd24a62ed6b25b498ce0ac17d7dc1ef, type: 3}
-  m_Name: New Item
+  m_Name: Bear
   m_EditorClassIdentifier: 
-  itemName: 
-  prefab: {fileID: 0}
+  itemName: bear
+  mesh: {fileID: 4300000, guid: 7b41ce0cf4881e942b22b126c24cac74, type: 3}
+  material: {fileID: 2100000, guid: f2b33c356d09d0e47b2432b94e9f4e5d, type: 2}
+  localScale: 0.5

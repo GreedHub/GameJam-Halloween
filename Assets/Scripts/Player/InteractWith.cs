@@ -20,6 +20,7 @@ public class InteractWith : MonoBehaviour
                 EnablePick(hitObject.targetObject);
 
                 if(Input.GetButton("Use"))
+                    Debug.Log(hitObject.targetObject.GetComponent<ItemLogic>().itemData.name);
                     GetItem(hitObject.targetObject);
 
                 break;

@@ -7,13 +7,26 @@ using Items;
 public class ItemLogic : MonoBehaviour
 {
     [SerializeField] public Item itemData;
-    GameObject prefab;
+    Renderer meshRenderer;
+    MeshFilter meshFilter;
+    MeshCollider meshCollider;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        prefab = Instantiate(itemData.prefab,Vector3.zero,Quaternion.identity,transform);
-        prefab.transform.localScale = Vector3.one * itemData.localScale;
+        meshFilter = gameObject.GetComponent<MeshFilter>();
+        meshFilter.mesh = itemData.mesh;
+
+        meshCollider = gameObject.GetComponent<MeshCollider>();
+        meshCollider.sharedMesh = itemData.mesh;
+
+        meshRenderer = gameObject.GetComponent<Renderer>();
+        meshRenderer.material = itemData.material;
+
+        transform.localScale = Vector3.one * itemData.localScale;
+
+        gameObject.tag = "Item";
     }
 
     // Update is called once per frame

@@ -21,8 +21,10 @@ namespace Items{
         }
 
         public void AddItem(Item item){
+
+            
            
-            items.Add(Instantiate(item));
+            items.Add(item);
 
         }
         

@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Imports\3DTOYS\rotatecamera.cs" />
      <Compile Include="Assets\Scripts\ChangeCrosshairTexture.cs" />
      <Compile Include="Assets\Scripts\GizmosExtend.cs" />
      <Compile Include="Assets\Scripts\Item\Item.cs" />
@@ -47,6 +48,8 @@
      <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Player\PickItem.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_UpdateCollected.cs" />
+     <None Include="Assets\Imports\3DTOYS\readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

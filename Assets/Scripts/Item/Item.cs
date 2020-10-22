@@ -6,7 +6,8 @@ namespace Items{
     [CreateAssetMenu(fileName = "New Item", menuName="Items/Item")]
     public class Item: ScriptableObject{    
         public string itemName;
-        public GameObject prefab;
+        public Mesh mesh;
+        public Material material;
         public float localScale;
     }
 }

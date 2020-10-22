@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     private CharacterController controller;
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private float runSpeed = 4f;
     private Vector3 velocity;
     private float gravity = -9.81f;
     [SerializeField] Transform groundCheck;
