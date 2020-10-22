@@ -18,6 +18,6 @@ public class UI_UpdateCollected : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = $"Collected dolls: {inventory.items.Count} / {inventory.maxCapacity}"; 
+        //text.text = $"Collected dolls: {inventory.items.Count} / {inventory.maxCapacity}"; 
     }
 }
