@@ -11,6 +11,8 @@ namespace AI{
         [SerializeField] GameObject player;
         [SerializeField] float walkRadius = 10f;
         [SerializeField] bool isActive;
+        [SerializeField] float walkSpeed;
+        [SerializeField] float runSpeed;
         //GameObject[] childrens;
         // Start is called before the first frame update
         void Start()
@@ -39,12 +41,14 @@ namespace AI{
 
         void WalkToRandomPosition(){
 
-            if(agent.remainingDistance > .1f) return;
+
+            if(agent.remainingDistance > agent.stoppingDistance) return;
 
             Vector3 randomDirection = Random.insideUnitSphere * walkRadius;
             NavMeshHit hit;
             NavMesh.SamplePosition(randomDirection, out hit, walkRadius, 1);
             Vector3 finalPosition = hit.position;
+
             agent.SetDestination(finalPosition);
 
         }
@@ -54,7 +58,7 @@ namespace AI{
         {
             if(isAttacking){    
 
-                agent.speed = 2f;          
+                agent.speed = runSpeed;          
                 
                 if(!isActive) ActivateGraphics();
 
@@ -62,9 +66,11 @@ namespace AI{
                 
             }else{
 
-                agent.speed = .5f;
+                agent.speed = walkSpeed;
 
-                if(isActive) DeactivateGraphics();
+                if(isActive){
+                    DeactivateGraphics();
+                }
 
                 WalkToRandomPosition();
                 

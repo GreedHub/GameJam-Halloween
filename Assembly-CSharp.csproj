@@ -53,7 +53,9 @@
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\UI\UI_DisplayInventoryItem.cs" />
      <Compile Include="Assets\Scripts\UI\UI_UpdateCollected.cs" />
+     <None Include="Assets\Imports\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\Imports\Rusty Flashlight\README.txt" />
+     <None Include="Assets\Imports\Props\Doors\Doors\Shader\BloodyDoor.shader" />
      <None Include="Assets\Imports\3DTOYS\readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
