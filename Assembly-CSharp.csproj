@@ -36,6 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ChangeCrosshairTexture.cs" />
+     <Compile Include="Assets\Scripts\GizmosExtend.cs" />
+     <Compile Include="Assets\Scripts\PickItem.cs" />
+     <Compile Include="Assets\Scripts\Player\InteractWith.cs" />
      <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Reference Include="UnityEngine">
@@ -640,6 +644,12 @@
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
         <HintPath>C:/Unity/Halloween/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids">
+        <HintPath>C:/Unity/Halloween/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+        <HintPath>C:/Unity/Halloween/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
