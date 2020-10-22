@@ -15,6 +15,16 @@ public class ItemLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Init();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void Init(){
         meshFilter = gameObject.GetComponent<MeshFilter>();
         meshFilter.mesh = itemData.mesh;
 
@@ -27,11 +37,5 @@ public class ItemLogic : MonoBehaviour
         transform.localScale = Vector3.one * itemData.localScale;
 
         gameObject.tag = "Item";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

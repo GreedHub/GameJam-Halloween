@@ -34,6 +34,8 @@ namespace Items{
                 
                 slot.item = item;
                 
+                return;
+                
             }
 
         }

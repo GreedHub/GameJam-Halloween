@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Items;
-public class DisplayItem : MonoBehaviour
+public class UI_DisplayInventoryItem : MonoBehaviour
 {
 
     [SerializeField] InventorySlot slot;
-    [SerializeField] GameObject itemPrefab;
+    [SerializeField] RawImage sprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +18,18 @@ public class DisplayItem : MonoBehaviour
     // Update is called once per frame
     void Update(){
 
-        if(slot.isEmpty) return;
+        Debug.Log(slot.isEmpty);
 
-        GameObject item = Instantiate(itemPrefab,transform);
-        ItemLogic il = item.GetComponent<ItemLogic>();
+        if(slot.isEmpty){ 
+            sprite.color = new Color(1,1,1,0);
+            sprite.texture = null;
+            return;
+        };
 
-        il.itemData = slot.item;
+        if(sprite.texture != null) return;
+        
+        sprite.color = new Color(1,1,1,1);
+        sprite.texture = slot.item.icon;
 
     }
 }

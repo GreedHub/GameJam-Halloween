@@ -9,7 +9,7 @@ namespace Items{
         public Item item;
 
         public bool isEmpty{
-            get{ return item != null; }
+            get{ return item == null; }
         }
     }
 }
