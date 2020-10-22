@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update(){
 
-        if(IsGrounded() && velocity.y < 0) velocity.y = -.2f;
+        if(IsGrounded() && velocity.y < 0) velocity.y = -.05f;
                 
         Vector3 rawDirection = GetInput();
 

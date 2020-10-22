@@ -9,5 +9,6 @@ namespace Items{
         public Mesh mesh;
         public Material material;
         public float localScale;
+        public Texture icon;
     }
 }
