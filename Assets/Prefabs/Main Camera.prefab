@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7639291439168353686}
   - component: {fileID: 8744792211403389558}
   - component: {fileID: 7806026232198764500}
+  - component: {fileID: 5507609163827315130}
+  - component: {fileID: 3350261072515175987}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -188,3 +190,32 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+--- !u!114 &5507609163827315130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7557576576121591427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552346f92ffd2614fb0a425f1caf35a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitObject: {fileID: 0}
+  PickMaxDistance: 2
+  PickRadius: 0.1
+--- !u!114 &3350261072515175987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7557576576121591427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e494891aab81b16478eb85958d737a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  playerTransform: {fileID: 0}

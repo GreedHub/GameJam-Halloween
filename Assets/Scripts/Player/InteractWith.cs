@@ -1,28 +1,54 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Items;
 
 public class InteractWith : MonoBehaviour
 {
-    CharacterController charCtrl;
-    // Start is called before the first frame update
-    void Start()
-    {
-        charCtrl = GetComponent<CharacterController>();
+   [SerializeField] CameraTargetObject hitObject;
+   [SerializeField] ItemInventory inventory;
+
+    void Update(){
+       if(!hitObject.isTargeting) return;
+
+       string tag = hitObject.targetObject.tag;
+
+       switch(tag){
+
+            case "Item":
+
+                EnablePick(hitObject.targetObject);
+
+                if(Input.GetButton("Use"))
+                    GetItem(hitObject.targetObject);
+
+                break;
+
+            case "Door":
+                break;
+
+            default:
+                break;
+       }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void EnablePick(GameObject item){
+        Renderer renderer = item.GetComponent<Renderer>();
+        //Enable glow shader
+    }
 
-        RaycastHit hit;
-        Vector3 p1 = transform.position + charCtrl.center;
-        float distanceToObstacle = 0;
-        
-        if (Physics.SphereCast(p1, charCtrl.height / 2, transform.forward, out hit, 10))
-        {
-            distanceToObstacle = hit.distance;
+    void GetItem(GameObject item){
+        if(inventory.isFull){
+            //TODO: trigger error message
+            return;
         }
 
+        Item _item = item.GetComponent<ItemLogic>().itemData;
+
+        inventory.AddItem(_item);
+
+        Destroy(item);
     }
+
 }

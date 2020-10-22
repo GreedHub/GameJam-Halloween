@@ -20,12 +20,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update(){
 
-        Debug.Log(IsGrounded());
-        Debug.Log("vy1: "+velocity.y);
-
         if(IsGrounded() && velocity.y < 0) velocity.y = -.2f;
-        
-        
+                
         Vector3 rawDirection = GetInput();
 
         Vector3 move = transform.right * rawDirection.x + transform.forward * rawDirection.z;
@@ -33,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime * Time.deltaTime;
-        Debug.Log("vy2: "+velocity.y);
 
         controller.Move(velocity);
     }
