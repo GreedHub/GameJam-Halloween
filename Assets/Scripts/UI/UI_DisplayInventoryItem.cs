@@ -18,8 +18,6 @@ public class UI_DisplayInventoryItem : MonoBehaviour
     // Update is called once per frame
     void Update(){
 
-        Debug.Log(slot.isEmpty);
-
         if(slot.isEmpty){ 
             sprite.color = new Color(1,1,1,0);
             sprite.texture = null;
