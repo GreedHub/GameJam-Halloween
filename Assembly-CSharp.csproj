@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Imports\3DTOYS\rotatecamera.cs" />
      <Compile Include="Assets\Imports\Rusty Flashlight\Scripts\FlashlightToggle.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_Damage.cs" />
      <Compile Include="Assets\Scripts\AI\AI_FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\ChangeCrosshairTexture.cs" />
      <Compile Include="Assets\Scripts\GizmosExtend.cs" />
