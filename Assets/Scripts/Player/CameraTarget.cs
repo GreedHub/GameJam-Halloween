@@ -93,7 +93,7 @@ public class CameraTarget : MonoBehaviour
                 if(Input.GetButtonDown("Use")){
                     int burned = inventory.BurnItems();
                     burnedItems.Value += burned;
-                    if(burnedItems.Value >= 10) gameStatus.isExitDoorLocked = false;
+                    if(burnedItems.Value >= 5) gameStatus.isExitDoorLocked = false;
                     //ALERT DOOR HAS BEEN OPENED
                 }
 

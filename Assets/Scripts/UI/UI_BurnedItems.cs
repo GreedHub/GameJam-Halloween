@@ -18,6 +18,6 @@ public class UI_BurnedItems : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = $"Burned items: {burnedItems.Value}/10";
+        text.text = $"Burned items: {burnedItems.Value}/5";
     }
 }
