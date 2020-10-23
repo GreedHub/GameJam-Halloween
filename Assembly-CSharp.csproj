@@ -68,9 +68,13 @@
      <Compile Include="Assets\Scripts\UI\UI_SpiritPressure.cs" />
      <None Include="Assets\Imports\characters_old\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\Imports\Rusty Flashlight\README.txt" />
+     <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorBark.shader" />
+     <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorLeavesOptimized.shader" />
      <None Include="Assets\Flooded_Grounds\Content\Shaders\FG_PBR_TopBlend.shader" />
+     <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorBarkOptimized.shader" />
      <None Include="Assets\Imports\Props\Doors\Doors\Shader\BloodyDoor.shader" />
      <None Include="Assets\Imports\3DTOYS\readme.txt" />
+     <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorLeaves.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

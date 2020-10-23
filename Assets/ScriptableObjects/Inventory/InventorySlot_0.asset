@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: InventorySlot_0
   m_EditorClassIdentifier: 
   id: 0
-  item: {fileID: 11400000, guid: e9361a31f3d10ea4184d0c089308d301, type: 2}
+  item: {fileID: 0}
