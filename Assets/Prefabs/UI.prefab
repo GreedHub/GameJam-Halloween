@@ -482,7 +482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Burned items: 0/10'
+  m_Text: 'Burned items: 0/5'
 --- !u!114 &2829369834094818532
 MonoBehaviour:
   m_ObjectHideFlags: 0
