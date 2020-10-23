@@ -1019,7 +1019,7 @@ GameObject:
   - component: {fileID: 4011471521076927471}
   - component: {fileID: 4011471521076927456}
   m_Layer: 5
-  m_Name: CursedITems
+  m_Name: SpiritPressure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1041,7 +1041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -684, y: 358}
+  m_AnchoredPosition: {x: 17, y: 404}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4011471521076927470
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1084,7 +1084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dolls collected 0 / 0
+  m_Text: 'Spirit pressure: 0%'
 --- !u!114 &4011471521076927456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1097,7 +1097,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317a5f7d17d250443895d6fdd0cafabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 2052585e8d06c5c4a84c9b08c38efb2d, type: 2}
+  spiritPressure:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: a108ab3e2b9ccac4ca2eb3fea1df94d2, type: 2}
 --- !u!1 &4011471521109897815
 GameObject:
   m_ObjectHideFlags: 0

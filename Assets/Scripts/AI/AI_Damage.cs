@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using ScriptableVariables;
 
 public class AI_Damage : MonoBehaviour
 {
+    [SerializeField] IntReference spiritPressure;
+    [SerializeField] float hitRange;
     Renderer ai_renderer;
     Camera mainCamera;
     NavMeshAgent agent;
+     float elapsed = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,26 +23,21 @@ public class AI_Damage : MonoBehaviour
     // Update is called once per frame
     void Update(){
 
-        if(ai_renderer.isVisible && InPositionToAttack()){
-            Debug.Log("TE VEO... DAME UN ABRAZO...");
+        if(InPositionToAttack()){
+            elapsed += Time.deltaTime;
+            if (elapsed >= 1f) {
+                elapsed = elapsed % 1f;
+                spiritPressure.Value += 1;
+            }
+            
         }
     }
 
-    bool InCameraRange(){
-        Vector3 viewportPoint = mainCamera.WorldToViewportPoint(transform.position);
-
-        return viewportPoint.x >= 0 &&
-               viewportPoint.x <= 1 &&
-               viewportPoint.y >= 0 &&
-               viewportPoint.y <= 1 &&
-               viewportPoint.z >= 0;
-    }
-
     bool InPositionToAttack(){
-        return InCameraRange() || CloseToPlayer();
+        return ai_renderer.isVisible || CloseToPlayer();
     }
 
     bool CloseToPlayer(){
-        return agent.remainingDistance <= agent.stoppingDistance + .2f;
+        return agent.remainingDistance <= agent.stoppingDistance + hitRange;
     }
 }
