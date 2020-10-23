@@ -35,6 +35,10 @@ public class CameraTarget : MonoBehaviour
             InteractWith(hit.transform.gameObject);
         }
 
+        foreach(InventorySlot itemSlot in inventory.slots){
+            itemSlot.item = null; 
+        }
+
     }
 
     void InteractWith(GameObject hitObject){

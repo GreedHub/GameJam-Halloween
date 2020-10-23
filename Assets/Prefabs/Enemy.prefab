@@ -45,12 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18073f898eb95e14e8098e6d196fd482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spiritPressure:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: a108ab3e2b9ccac4ca2eb3fea1df94d2, type: 2}
   isAttacking: 0
   player: {fileID: 0}
   walkRadius: 20
   isActive: 0
   walkSpeed: 1
   runSpeed: 2
+  gameStatus: {fileID: 11400000, guid: 410169e9a7225e44997c97102412b660, type: 2}
+  attackTime: 0
+  attackCooldown: 0
 --- !u!195 &2966864043671670711
 NavMeshAgent:
   m_ObjectHideFlags: 0

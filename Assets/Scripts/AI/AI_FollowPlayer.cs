@@ -2,24 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using ScriptableVariables;
 
 namespace AI{
     public class AI_FollowPlayer : MonoBehaviour
     {       
         NavMeshAgent agent;  
+        [SerializeField] IntReference spiritPressure;
         [SerializeField] bool isAttacking = false;
         [SerializeField] GameObject player;
         [SerializeField] float walkRadius = 10f;
         [SerializeField] bool isActive;
         [SerializeField] float walkSpeed;
         [SerializeField] float runSpeed;
+
+        [SerializeField] GameStatus gameStatus;
+
+        [SerializeField] float attackTime;
+        [SerializeField] float attackCooldown; 
+        float elapsed = 0f;
         //GameObject[] childrens;
         // Start is called before the first frame update
         void Start()
         {
             isActive = true;
             agent = gameObject.GetComponent<NavMeshAgent>();
-
+            attackCooldown = 10;
+            attackTime = 5;
         }
 
 
@@ -56,6 +65,24 @@ namespace AI{
         // Update is called once per frame
         void Update()
         {
+
+            if(gameStatus.state != GameStates.PLAYING) return;
+
+            elapsed += Time.deltaTime;
+            if (elapsed >= 1f) {
+                elapsed = elapsed % 1f;
+                if(!isAttacking) attackCooldown-= 1;
+                if(isAttacking) attackTime-=1;
+            }
+
+            if(attackCooldown<=0 && !isAttacking){
+                StartAttacking();
+            }
+
+            if(attackTime<=0 && isAttacking){
+                StopAttacking();
+            }
+
             if(isAttacking){    
 
                 agent.speed = runSpeed;          
@@ -76,5 +103,19 @@ namespace AI{
                 
             }
         }
+
+        void StopAttacking(){
+            attackCooldown = 100f - spiritPressure.Value;
+            isAttacking = false;
+        }
+
+        void StartAttacking(){
+            attackTime = 5 + spiritPressure.Value;
+            isAttacking = true;
+        }
+
+
+
+
     }
 }
