@@ -19,7 +19,8 @@ public class DoorMechanism : MonoBehaviour
     void Update()
     {
         
-/*         if(targetRotation.z != transform.rotation.z){
+    /* TODO: add me some LERP
+         if(targetRotation.z != transform.rotation.z){
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, timeCount);
             timeCount = timeCount + Time.deltaTime;
         }  */
@@ -30,7 +31,6 @@ public class DoorMechanism : MonoBehaviour
         if(isOpen){
             targetRotation.y -= 90;            
         }else{
-            Debug.Log("entre aca");
             targetRotation.y += 90;
         }
 
