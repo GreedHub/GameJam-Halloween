@@ -17,6 +17,9 @@ public class CameraTarget : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        foreach(InventorySlot itemSlot in inventory.slots){
+            itemSlot.item = null; 
+        }
     }
 
     // Update is called once per frame
@@ -35,9 +38,7 @@ public class CameraTarget : MonoBehaviour
             InteractWith(hit.transform.gameObject);
         }
 
-        foreach(InventorySlot itemSlot in inventory.slots){
-            itemSlot.item = null; 
-        }
+        
 
     }
 
