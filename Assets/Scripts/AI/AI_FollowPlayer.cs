@@ -72,7 +72,7 @@ namespace AI{
             if (elapsed >= 1f) {
                 elapsed = elapsed % 1f;
                 if(!isAttacking) attackCooldown-= 1;
-                if(isAttacking) attackTime-=1;
+                if(isAttacking && IsNearPlayer()) attackTime-=1;
             }
 
             if(attackCooldown<=0 && !isAttacking){
@@ -106,6 +106,7 @@ namespace AI{
 
         void StopAttacking(){
             attackCooldown = 100f - spiritPressure.Value;
+            if(attackCooldown<15) attackCooldown = 15;
             isAttacking = false;
         }
 
@@ -115,7 +116,9 @@ namespace AI{
         }
 
 
-
+        bool IsNearPlayer(){
+            return Vector3.Distance(player.transform.position, transform.position) < 6f;
+        }
 
     }
 }
