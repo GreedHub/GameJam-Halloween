@@ -10,6 +10,7 @@ public class CameraTarget : MonoBehaviour
     [SerializeField] float PickMaxDistance = 2f; 
     [SerializeField] float PickRadius;
     [SerializeField] ItemInventory inventory;
+    [SerializeField] UI_CrosshairText crosshairText;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class CameraTarget : MonoBehaviour
 
     void InteractWith(GameObject hitObject){
 
-
+       crosshairText.text = "";
        string tag = hitObject.tag;
 
        switch(tag){
@@ -44,6 +45,7 @@ public class CameraTarget : MonoBehaviour
             case "Item":
 
                 EnablePick(hitObject);
+                crosshairText.text = "Pickup (E)";
 
                 if(Input.GetButton("Use")){
                     Debug.Log(hitObject.GetComponent<ItemLogic>().itemData.name);
@@ -53,6 +55,11 @@ public class CameraTarget : MonoBehaviour
                 break;
 
             case "Door":
+                DoorMechanism dm = hitObject.GetComponent<DoorMechanism>();
+                crosshairText.text = dm.isOpen ? "Close (E)" : "Open (E)";
+               
+                if(Input.GetButton("Use"))
+                    dm.Use();
                 break;
 
             default:
