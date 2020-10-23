@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\UI\UI_UpdateCollected.cs" />
     <None Include="Assets\Imports\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
     <None Include="Assets\Imports\Rusty Flashlight\README.txt" />
+    <None Include="Assets\Flooded_Grounds\Content\Shaders\FG_PBR_TopBlend.shader" />
     <None Include="Assets\Imports\Props\Doors\Doors\Shader\BloodyDoor.shader" />
     <None Include="Assets\Imports\3DTOYS\readme.txt" />
     <Reference Include="UnityEngine">
