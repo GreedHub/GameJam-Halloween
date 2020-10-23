@@ -265,6 +265,16 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 7454092572531918496}
+    - target: {fileID: 4148759676722503094, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148759676722503094, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_VolumetricDimmer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5507609163827315130, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
         type: 3}
       propertyPath: hitObject
@@ -277,6 +287,51 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2052585e8d06c5c4a84c9b08c38efb2d,
         type: 2}
+    - target: {fileID: 6442897863749499076, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 795774.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442897863749499076, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Range
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442897863749499076, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443236983677563814, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 795774.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443236983677563814, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Range
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443236983677563814, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455804711006452030, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 795774.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455804711006452030, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455804711006452030, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7557576576121591427, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
         type: 3}
       propertyPath: m_Name
@@ -336,6 +391,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088876624164550935, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088876624164550935, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_VolumetricDimmer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896809963441684202, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896809963441684202, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae,
+        type: 3}
+      propertyPath: m_VolumetricDimmer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a5c5a2ada4eaf4e83c3efcf4089eae, type: 3}

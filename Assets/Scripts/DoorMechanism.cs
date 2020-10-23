@@ -5,41 +5,38 @@ using UnityEngine;
 public class DoorMechanism : MonoBehaviour
 {
 
-    [SerializeField] Quaternion targetRotation;
+
+    Vector3 targetRotation;
     private float timeCount = 0.0f;
-    public bool isOpen{
-        get{ return targetRotation.z ==  90; }
-    }
+    public bool isOpen = false;
     // Start is called before the first frame update
     void Start()
     {
-        targetRotation = transform.rotation;
+        targetRotation = transform.eulerAngles;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(targetRotation.z != transform.rotation.z){
+        
+/*         if(targetRotation.z != transform.rotation.z){
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, timeCount);
             timeCount = timeCount + Time.deltaTime;
-        }
+        }  */
     }
 
     public void Use(){
-        ToggleTargetRotation();
+        
+        if(isOpen){
+            targetRotation.y -= 90;            
+        }else{
+            Debug.Log("entre aca");
+            targetRotation.y += 90;
+        }
+
+        isOpen = !isOpen;
+
+        transform.eulerAngles = targetRotation;
     }
 
-    void ToggleTargetRotation(){
-        switch(targetRotation.z){
-            case 90:
-                targetRotation.z = 0;
-                break;
-            case  0:
-                targetRotation.z =  90;
-                break;
-            default:
-                targetRotation.z = 0;
-                break;
-        }
-    }
 }

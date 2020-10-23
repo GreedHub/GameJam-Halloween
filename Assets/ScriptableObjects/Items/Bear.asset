@@ -16,3 +16,4 @@ MonoBehaviour:
   mesh: {fileID: 4300000, guid: 7b41ce0cf4881e942b22b126c24cac74, type: 3}
   material: {fileID: 2100000, guid: f2b33c356d09d0e47b2432b94e9f4e5d, type: 2}
   localScale: 0.5
+  icon: {fileID: 2800000, guid: d26833c5193882241bb44aa2d578d26c, type: 3}

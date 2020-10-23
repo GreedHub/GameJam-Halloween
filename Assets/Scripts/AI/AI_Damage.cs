@@ -11,9 +11,9 @@ public class AI_Damage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = Camera.main;
+      mainCamera = Camera.main;
       ai_renderer = GetComponent<Renderer>(); 
-      agent = transform.parent.gameObject.GetComponent<NavMeshAgent>();
+      agent = transform.parent.transform.parent.gameObject.GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame

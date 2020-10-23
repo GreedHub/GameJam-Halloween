@@ -47,7 +47,7 @@ public class CameraTarget : MonoBehaviour
                 EnablePick(hitObject);
                 crosshairText.text = "Pickup (E)";
 
-                if(Input.GetButton("Use")){
+                if(Input.GetButtonDown("Use")){
                     Debug.Log(hitObject.GetComponent<ItemLogic>().itemData.name);
                     GetItem(hitObject);
                 }
@@ -58,7 +58,7 @@ public class CameraTarget : MonoBehaviour
                 DoorMechanism dm = hitObject.GetComponent<DoorMechanism>();
                 crosshairText.text = dm.isOpen ? "Close (E)" : "Open (E)";
                
-                if(Input.GetButton("Use"))
+                if(Input.GetButtonDown("Use"))
                     dm.Use();
                 break;
 
