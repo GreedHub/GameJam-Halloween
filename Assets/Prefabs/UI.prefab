@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 329, y: 104.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8752696697443870032
 CanvasRenderer:
@@ -66,18 +66,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PERDISTE
+  m_Text: "No pudiste romper la maldici\xF3n.\n\n\n Est\xE1s muerto"
 --- !u!1 &304772574810899613
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +742,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 364.9, y: 65.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2799407820119297706
 CanvasRenderer:
@@ -773,18 +773,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_Alignment: 1
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GANASTE
+  m_Text: "Rompiste la maldici\xF3n y escapaste de la casa con \xE9xito."
 --- !u!1 &3128153992395628530
 GameObject:
   m_ObjectHideFlags: 0
@@ -3526,11 +3526,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Te encontras encerrado en una casa maldita. Para eliminar la maldicion
-    y que se desbloqueen las puertas de salida tenes que encontrar los 10 items malditos
-    y quemarlos en la chimenea.\n\nMerodeando por la casa hay un esp\xEDritu que
-    te atacar\xE1 si te encuentra. Dispones de un medidor de Presion Espiritual que
-    aumentar\xE1 cuanto ams interactues con el esp\xEDritu o cuantos mas items malditos
-    tengas. \n\nSe precabido al agarrar items malditos, ya que CUANTOS MAS TENES,
-    PEOR ES, y si tu presion espiritual llega a 100, el espiritu te matar\xE1.\n\nBotones:\n 
-    - Intereactuar: (E) \n  - Movimiento: (W)(A)(S)(D)\n  - Camara: (Mouse)"
+  m_Text: "Te encontr\xE1s encerrado en una casa maldita. Para eliminar la maldici\xF3n
+    y que se desbloqueen las puertas de salida ten\xE9s que encontrar los 10 \xEDtems
+    malditos y quemarlos en la chimenea.\r\n\r\nMerodeando por la casa hay un esp\xEDritu
+    que te atacar\xE1 si te encuentra. Dispon\xE9s de un medidor de Presi\xF3n Espiritual
+    que aumentar\xE1 cuanto mas interact\xFAes con el esp\xEDritu o cuantos mas \xEDtems
+    malditos tengas en el inventario.\r\n\r\nS\xE9 precavido al agarrar \xEDtems
+    malditos, ya que CUANTOS MAS TEN\xC9S, PEOR ES, y si tu Presi\xF3n Espiritual
+    llega a 100, el esp\xEDritu te matar\xE1.\r\n\r\nBotones:\r\n  - Interactuar:
+    (E) \r\n  - Movimiento: (W)(A)(S)(D)\r\n  - C\xE1mara: (Mouse)"
