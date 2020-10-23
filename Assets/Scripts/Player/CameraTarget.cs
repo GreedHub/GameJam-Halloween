@@ -74,6 +74,12 @@ public class CameraTarget : MonoBehaviour
 
                 break;
 
+            case "LockedDoor":
+                
+                crosshairText.text = "Locked";
+
+                break;
+
             default:
                 break;
        }

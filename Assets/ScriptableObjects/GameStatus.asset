@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d516d91f3d923944876bccd99e45441, type: 3}
   m_Name: GameStatus
   m_EditorClassIdentifier: 
-  state: 0
+  state: 1
   hasWon: 0
-  isExitDoorLocked: 0
+  isExitDoorLocked: 1
   isFlashlightEnabled: 0
