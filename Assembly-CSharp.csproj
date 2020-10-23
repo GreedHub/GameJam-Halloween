@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Imports\3DTOYS\rotatecamera.cs" />
      <Compile Include="Assets\Imports\Rusty Flashlight\Scripts\FlashlightToggle.cs" />
+     <Compile Include="Assets\Scripts\AI\AI_ChangeMaterial.cs" />
      <Compile Include="Assets\Scripts\AI\AI_Damage.cs" />
      <Compile Include="Assets\Scripts\AI\AI_FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\DoorMechanism.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\ScriptableVariables\StringReference.cs" />
      <Compile Include="Assets\Scripts\ScriptableVariables\StringVariable.cs" />
      <Compile Include="Assets\Scripts\UI\ChangeCrosshairTexture.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_BurnedItems.cs" />
      <Compile Include="Assets\Scripts\UI\UI_CrosshairText.cs" />
      <Compile Include="Assets\Scripts\UI\UI_CrosshairTextLogic.cs" />
      <Compile Include="Assets\Scripts\UI\UI_DisplayInventoryItem.cs" />

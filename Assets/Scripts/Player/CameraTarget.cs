@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Items;
-
+using ScriptableVariables;
 
 public class CameraTarget : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class CameraTarget : MonoBehaviour
     [SerializeField] ItemInventory inventory;
     [SerializeField] UI_CrosshairText crosshairText;
     [SerializeField] GameStatus gameStatus;
+    [SerializeField] IntReference burnedItems;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +78,19 @@ public class CameraTarget : MonoBehaviour
             case "LockedDoor":
                 
                 crosshairText.text = "Locked";
+
+                break;
+
+            case "FirePlace":
+
+                crosshairText.text = "Burn cursed items (E)";
+                
+                if(Input.GetButtonDown("Use")){
+                    int burned = inventory.BurnItems();
+                    burnedItems.Value += burned;
+                    if(burnedItems.Value >= 10) gameStatus.isExitDoorLocked = false;
+                    //ALERT DOOR HAS BEEN OPENED
+                }
 
                 break;
 

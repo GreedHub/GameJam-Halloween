@@ -26,6 +26,22 @@ namespace Items{
             }
         }
 
+        public int BurnItems(){
+            int burnedItems = 0;
+            foreach (var slot in slots){
+                if(!slot.isEmpty) {
+                    BurnItem(slot);
+                    burnedItems++;
+                }
+            }
+            return burnedItems;
+        }
+
+        public void BurnItem(InventorySlot slot){
+            slot.item = null;
+            
+        }
+
         public void AddItem(Item item){
 
             foreach (var slot in slots){
