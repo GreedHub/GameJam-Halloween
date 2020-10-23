@@ -33,7 +33,7 @@ namespace AI{
 
         void DeactivateGraphics(){
             isActive = false;
-            for(int i = 0; i <= transform.childCount; i++){
+            for(int i = 0; i < transform.childCount ; i++){
                 Transform ct = transform.GetChild(i);
                 ct.gameObject.SetActive(false);
             }            

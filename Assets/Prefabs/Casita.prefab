@@ -5381,10 +5381,9 @@ GameObject:
   - component: {fileID: 36775589039393597}
   - component: {fileID: 36775589038328701}
   - component: {fileID: 36775589042533275}
-  - component: {fileID: 2864655256208871067}
   m_Layer: 0
   m_Name: Villa1_Door_B
-  m_TagString: Door
+  m_TagString: ExitDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5463,19 +5462,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2998155, y: 4.4858165, z: 0.30403447}
   m_Center: {x: -0.62512106, y: 2.2429082, z: -0.0065680817}
---- !u!114 &2864655256208871067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36775589040606295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6731719cb378e640becc1441c702d6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOpen: 0
 --- !u!1 &36775589044268547
 GameObject:
   m_ObjectHideFlags: 0
@@ -22631,10 +22617,9 @@ GameObject:
   - component: {fileID: 36775590017197924}
   - component: {fileID: 36775590018230052}
   - component: {fileID: 36775590014033858}
-  - component: {fileID: 8217537971689326724}
   m_Layer: 0
   m_Name: Villa1_Door_B
-  m_TagString: Door
+  m_TagString: ExitDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22713,19 +22698,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2998155, y: 4.4858165, z: 0.30403447}
   m_Center: {x: -0.62512106, y: 2.2429082, z: -0.0065680817}
---- !u!114 &8217537971689326724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36775590016311310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6731719cb378e640becc1441c702d6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOpen: 0
 --- !u!1 &36775590021411185
 GameObject:
   m_ObjectHideFlags: 0
@@ -33372,10 +33344,9 @@ GameObject:
   - component: {fileID: 36775590623253764}
   - component: {fileID: 36775590624332258}
   - component: {fileID: 36775590628837688}
-  - component: {fileID: 3980598999636693242}
   m_Layer: 0
   m_Name: Villa1_Door_A
-  m_TagString: Door
+  m_TagString: ExitDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33454,19 +33425,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6095188, y: 4.0621204, z: 0.30403447}
   m_Center: {x: -0.7799727, y: 2.0310602, z: -0.0065680817}
---- !u!114 &3980598999636693242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36775590626347090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6731719cb378e640becc1441c702d6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOpen: 0
 --- !u!1 &36775590629016236
 GameObject:
   m_ObjectHideFlags: 0

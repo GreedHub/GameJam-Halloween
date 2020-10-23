@@ -11,6 +11,7 @@ public class CameraTarget : MonoBehaviour
     [SerializeField] float PickRadius;
     [SerializeField] ItemInventory inventory;
     [SerializeField] UI_CrosshairText crosshairText;
+    [SerializeField] GameStatus gameStatus;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +61,17 @@ public class CameraTarget : MonoBehaviour
                
                 if(Input.GetButtonDown("Use"))
                     dm.Use();
+                break;
+
+            case "ExitDoor":
+                
+                crosshairText.text = gameStatus.isExitDoorLocked ? "Locked" : "Exit (E)";
+               
+                if(Input.GetButtonDown("Use") &&  !gameStatus.isExitDoorLocked){
+                    gameStatus.hasWon = true;
+                    gameStatus.state = GameStates.END;
+                }
+
                 break;
 
             default:

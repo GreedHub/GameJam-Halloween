@@ -36,12 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameManagerLogic.cs" />
      <Compile Include="Assets\Imports\3DTOYS\rotatecamera.cs" />
      <Compile Include="Assets\Imports\Rusty Flashlight\Scripts\FlashlightToggle.cs" />
      <Compile Include="Assets\Scripts\AI\AI_Damage.cs" />
      <Compile Include="Assets\Scripts\AI\AI_FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\DoorMechanism.cs" />
+     <Compile Include="Assets\Scripts\GameManager\GameStatus.cs" />
      <Compile Include="Assets\Scripts\Item\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\Item\Item.cs" />
      <Compile Include="Assets\Scripts\Item\ItemInventory.cs" />
@@ -55,10 +55,14 @@
      <Compile Include="Assets\Scripts\ScriptableVariables\IntReference.cs" />
      <Compile Include="Assets\Scripts\ScriptableVariables\IntVariable.cs" />
      <Compile Include="Assets\Scripts\ScriptableVariables\ReadOnlyAttribute.cs" />
+     <Compile Include="Assets\Scripts\ScriptableVariables\StringReference.cs" />
+     <Compile Include="Assets\Scripts\ScriptableVariables\StringVariable.cs" />
      <Compile Include="Assets\Scripts\UI\ChangeCrosshairTexture.cs" />
      <Compile Include="Assets\Scripts\UI\UI_CrosshairText.cs" />
      <Compile Include="Assets\Scripts\UI\UI_CrosshairTextLogic.cs" />
      <Compile Include="Assets\Scripts\UI\UI_DisplayInventoryItem.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_GameStart.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_Manager.cs" />
      <Compile Include="Assets\Scripts\UI\UI_SpiritPressure.cs" />
      <None Include="Assets\Imports\characters_old\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\Imports\Rusty Flashlight\README.txt" />
