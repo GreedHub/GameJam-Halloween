@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private CharacterController controller;
+
     [SerializeField] private float speed = 2f;
     [SerializeField] private float runSpeed = 4f;
-    private Vector3 velocity;
-    private float gravity = -9.81f;
     [SerializeField] Transform groundCheck;
-    float groundDistance = .4f;
     [SerializeField] LayerMask groundMask;
+    private CharacterController controller;
+    private Vector3 velocity;
+    private float groundDistance = .4f;
+    private float gravity = -9.81f;
 
     void Start(){
         controller = gameObject.GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update(){
 
         if(IsGrounded() && velocity.y < 0) velocity.y = -.05f;

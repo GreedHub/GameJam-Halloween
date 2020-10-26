@@ -9,21 +9,28 @@ public class MouseLook : MonoBehaviour
     [SerializeField] Transform playerTransform;
 
     float verticalRotation = 0f;
+    float horizontalRotation = 0f;
     void Start()
     {
-        
+        controller = gameObject.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         Vector2 mouseRotation = GetMouseRotation();
 
         verticalRotation -= mouseRotation.y; 
         verticalRotation = Mathf.Clamp(verticalRotation,-90f,90f);
+        horizontalRotation += mouseRotation.x;
 
-        transform.localRotation = Quaternion.Euler(verticalRotation,0f,0f);
-        playerTransform.Rotate(Vector3.up * mouseRotation.x);
+        transform.localRotation = Quaternion.Euler(verticalRotation, horizontalRotation, 0f);
+        playerTransform.eulerAngles = new Vector3(playerTransform.rotation.eulerAngles.x,transform.rotation.eulerAngles.y, playerTransform.rotation.eulerAngles.z);
+       // playerTransform.Rotate(Vector3.up * mouseRotation.x);
+        transform.position = playerTransform.position + Vector3.up * 1.5f;
+
+        //transform.position = playerTransform.position + Vector3.up ;
     }
 
 

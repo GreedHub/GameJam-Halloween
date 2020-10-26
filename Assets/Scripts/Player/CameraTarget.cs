@@ -13,6 +13,9 @@ public class CameraTarget : MonoBehaviour
     [SerializeField] UI_CrosshairText crosshairText;
     [SerializeField] GameStatus gameStatus;
     [SerializeField] IntReference burnedItems;
+    [SerializeField] IntReference spiritPressure;
+
+    Camera mainCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -20,23 +23,37 @@ public class CameraTarget : MonoBehaviour
         foreach(InventorySlot itemSlot in inventory.slots){
             itemSlot.item = null; 
         }
+        mainCamera = Camera.main;
+
+        mainCamera.enabled = false;
+        mainCamera.enabled = true;
+        
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
 
         RaycastHit hit;
- 
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //loat zoomDistance = zoomSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
+        //camera.transform.Translate(ray.direction * zoomDistance, Space.World);
+
+
+        
         float distanceToObstacle = 0;
 
-        if (Physics.SphereCast(transform.position, .1f, transform.forward, out hit, PickMaxDistance))
+        if (Physics.Raycast(ray,out hit,PickMaxDistance))
         {
             distanceToObstacle = hit.distance;
 
-            Debug.DrawRay(transform.position, transform.forward*PickMaxDistance, Color.green);
+
+            Debug.DrawRay(ray.origin, ray.direction* PickMaxDistance, Color.green);
             InteractWith(hit.transform.gameObject);
         }
+
 
         
 
@@ -55,7 +72,7 @@ public class CameraTarget : MonoBehaviour
                 crosshairText.text = "Pickup (E)";
 
                 if(Input.GetButtonDown("Use")){
-                    Debug.Log(hitObject.GetComponent<ItemLogic>().itemData.name);
+                    spiritPressure.Value += 20;
                     GetItem(hitObject);
                 }
 
@@ -93,7 +110,8 @@ public class CameraTarget : MonoBehaviour
                 if(Input.GetButtonDown("Use")){
                     int burned = inventory.BurnItems();
                     burnedItems.Value += burned;
-                    if(burnedItems.Value >= 5) gameStatus.isExitDoorLocked = false;
+                    spiritPressure.Value -= 10;
+                    if (burnedItems.Value >= 5) gameStatus.isExitDoorLocked = false;
                     //ALERT DOOR HAS BEEN OPENED
                 }
 
