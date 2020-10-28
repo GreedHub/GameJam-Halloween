@@ -2845,6 +2845,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 795110832}
+    - target: {fileID: 2966864043671670710, guid: ba0ea2bb9fa13fd46abea0133b0ad28c,
+        type: 3}
+      propertyPath: screamSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4876393824209948141, guid: ba0ea2bb9fa13fd46abea0133b0ad28c,
         type: 3}
       propertyPath: m_IsActive
