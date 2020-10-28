@@ -9,7 +9,7 @@ namespace AI{
     {       
         NavMeshAgent agent;  
         [SerializeField] IntReference spiritPressure;
-        [SerializeField] bool isAttacking = false;
+        [SerializeField] AI_Data aiData;
         [SerializeField] GameObject player;
         [SerializeField] float walkRadius = 10f;
         [SerializeField] bool isActive;
@@ -20,21 +20,22 @@ namespace AI{
 
         [SerializeField] float attackTime;
         [SerializeField] float attackCooldown; 
+        [SerializeField] GameObject screamSound;
         float elapsed = 0f;
         //GameObject[] childrens;
         // Start is called before the first frame update
         void Start()
         {
-            isActive = true;
             agent = gameObject.GetComponent<NavMeshAgent>();
-            attackCooldown = 10;
-            attackTime = 5;
+            attackCooldown = 20f;
+            attackTime = 5f;
+            
         }
 
 
         void ActivateGraphics(){
             isActive = true;
-            for(int i = 0; i <= transform.childCount; i++){
+            for(int i = 0; i < transform.childCount; i++){
                 Transform ct = transform.GetChild(i);
                 ct.gameObject.SetActive(true);
             }            
@@ -71,19 +72,19 @@ namespace AI{
             elapsed += Time.deltaTime;
             if (elapsed >= 1f) {
                 elapsed = elapsed % 1f;
-                if(!isAttacking) attackCooldown-= 1;
-                if(isAttacking && IsNearPlayer()) attackTime-=1;
+                if(!aiData.isAttacking) attackCooldown-= 1;
+                if(aiData.isAttacking && IsNearPlayer()) attackTime-=1;
             }
 
-            if(attackCooldown<=0 && !isAttacking){
+            if(attackCooldown<=0 && !aiData.isAttacking){
                 StartAttacking();
             }
 
-            if(attackTime<=0 && isAttacking){
+            if(attackTime<=0 && aiData.isAttacking){
                 StopAttacking();
             }
 
-            if(isAttacking){    
+            if(aiData.isAttacking){    
 
                 agent.speed = runSpeed;          
                 
@@ -107,12 +108,14 @@ namespace AI{
         void StopAttacking(){
             attackCooldown = 100f - spiritPressure.Value;
             if(attackCooldown<15) attackCooldown = 15;
-            isAttacking = false;
+            aiData.isAttacking = false;
         }
 
         void StartAttacking(){
             attackTime = 5 + spiritPressure.Value;
-            isAttacking = true;
+            aiData.isAttacking = true;
+            aiData.hasAlreadyScreamed = false;
+            screamSound.SetActive(false);
         }
 
 

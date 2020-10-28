@@ -12,7 +12,6 @@ public class MouseLook : MonoBehaviour
     float horizontalRotation = 0f;
     void Start()
     {
-        controller = gameObject.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
